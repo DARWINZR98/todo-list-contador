@@ -1,107 +1,193 @@
-/* Fondo general */
+/* ===== Fondo general ===== */
 body{
+    margin: 0;
+    padding: 0;
+
     font-family: Arial, sans-serif;
-    background: #f4f6f9;
+
+    background:
+    linear-gradient(135deg, #f8fafc, #dbeafe);
+
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    align-items: center;
 }
 
-/* Caja principal */
+/* ===== Caja principal ===== */
 .container{
+    width: 440px;
+
     background: white;
-    width: 400px;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    box-shadow:
+    0px 10px 35px rgba(0,0,0,0.12);
 }
 
-/* Título */
+/* ===== Título ===== */
 h1{
     text-align: center;
-    color: #333;
+
+    color: #1e293b;
+
+    margin-bottom: 25px;
+
+    font-size: 32px;
 }
 
-/* Input y botón */
+/* ===== Área input ===== */
 .input-area{
     display: flex;
+
     gap: 10px;
+
     margin-bottom: 20px;
 }
 
+/* ===== Input ===== */
 #inputTarea{
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-}
 
-#btnAgregar{
-    background: #4f46e5;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 14px;
+
+    border-radius: 14px;
+
+    border: 2px solid #dbeafe;
+
+    outline: none;
+
+    font-size: 15px;
+
     transition: 0.2s;
 }
 
-#btnAgregar:hover{
-    background: #4338ca;
+#inputTarea:focus{
+    border-color: #60a5fa;
+
+    box-shadow:
+    0px 0px 10px rgba(96,165,250,0.3);
 }
 
-/* Contador */
-#contador{
-    margin-bottom: 15px;
+/* ===== Botón agregar ===== */
+#btnAgregar{
+    border: none;
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    color: white;
+
     font-weight: bold;
-    color: #555;
+
+    background:
+    linear-gradient(135deg, #3b82f6, #2563eb);
+
+    transition: 0.25s;
 }
 
-/* Lista */
+#btnAgregar:hover{
+    transform: translateY(-2px) scale(1.04);
+
+    box-shadow:
+    0px 8px 18px rgba(59,130,246,0.35);
+}
+
+/* ===== Contador ===== */
+#contador{
+    text-align: center;
+
+    color: #475569;
+
+    margin-bottom: 18px;
+
+    font-weight: bold;
+}
+
+/* ===== Lista ===== */
 #lista{
     padding: 0;
+    margin: 0;
 }
 
-/* Cada tarea */
+/* ===== Cada tarea ===== */
 #lista li{
     list-style: none;
-    background: #eef2ff;
-    margin-bottom: 10px;
-    padding: 12px;
-    border-radius: 10px;
+
+    background: #f8fafc;
+
+    margin-bottom: 14px;
+
+    padding: 15px;
+
+    border-radius: 18px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 8px;
+
+    color: #1e293b;
+
+    transition: 0.25s;
+
+    border: 1px solid #e2e8f0;
 }
 
-/* Botones dentro del li */
+/* Hover tarea */
+#lista li:hover{
+    transform: translateY(-2px);
+
+    background: #eff6ff;
+}
+
+/* ===== Botones de tareas ===== */
 #lista li button{
     border: none;
-    padding: 6px 10px;
-    border-radius: 6px;
+
     cursor: pointer;
+
+    padding: 9px 11px;
+
+    border-radius: 12px;
+
     transition: 0.2s;
 }
 
-/* Botón completar */
-#lista li button:last-child{
-    background: #22c55e;
-    color: white;
-}
-
-#lista li button:last-child:hover{
-    background: #16a34a;
-}
-
-/* Botón eliminar */
+/* ===== Botón eliminar ===== */
 .btn-eliminar{
-    background: #ef4444;
+    background:
+    linear-gradient(135deg, #f87171, #ef4444);
+
     color: white;
 }
 
 .btn-eliminar:hover{
-    background: #dc2626;
+    transform: scale(1.08);
+
+    box-shadow:
+    0px 5px 14px rgba(239,68,68,0.35);
+}
+
+/* ===== Botón completar ===== */
+#lista li button:last-child{
+    background:
+    linear-gradient(135deg, #4ade80, #22c55e);
+
+    color: white;
+}
+
+#lista li button:last-child:hover{
+    transform: scale(1.08);
+
+    box-shadow:
+    0px 5px 14px rgba(34,197,94,0.35);
 }
