@@ -13,7 +13,7 @@ function mostrarLista(){
 
             crearLista(totalTareas);
 
-            console.log(totalTareas);
+            //console.log(totalTareas);
             contador = tareas1.length;
             cont.textContent = "Tareas: "+ contador;
         })
