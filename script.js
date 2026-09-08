@@ -15,7 +15,7 @@ function mostrarLista(){
 
             //console.log(totalTareas);
             contador = tareas1.length;
-            cont.textContent = "Tareas: "+ contador;
+            cont.textContent = "Tareass: "+ contador;
         })
 }
 
